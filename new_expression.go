@@ -14,6 +14,13 @@ type Person struct {
 	Age  *int   `json:"age"`
 }
 
+
+type Animal struct {
+	Name string `json:"name"`
+	Type string `json:"type"`
+}
+
+
 // GOOD: Using new(expression) to create a pointer to a computed value.
 // The analyzer should NOT flag this as an issue.
 func PersonJSON(name string, born time.Time) ([]byte, error) {
